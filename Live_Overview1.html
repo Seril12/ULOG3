@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metric Cards - ULOG3</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+  <style>
+
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center; color: var(--primary-blue); margin-bottom: 2rem;">ULOG3 Metric Cards</h1>
+  
+  <div class="metrics-container">
+    <!-- Temperature Card -->
+    <div class="card" id="temperature-card">
+      <div class="card-header">
+        <span class="card-title">Temperature</span>
+        <i data-lucide="thermometer" class="icon"></i>
+      </div>
+      <div class="metric" id="temperature">24.5<span class="unit">°C</span></div>
+      <div class="chart-container">
+        <canvas id="tempChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Altitude Card -->
+    <div class="card" id="altitude-card">
+      <div class="card-header">
+        <span class="card-title">Altitude</span>
+        <i data-lucide="mountain" class="icon"></i>
+      </div>
+      <div class="metric" id="altitude">1,234<span class="unit">m</span></div>
+      <div class="chart-container">
+        <canvas id="altChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Pressure Card -->
+    <div class="card" id="pressure-card">
+      <div class="card-header">
+        <span class="card-title">Pressure</span>
+        <i data-lucide="gauge" class="icon"></i>
+      </div>
+      <div class="metric" id="pressure">1,013<span class="unit">hPa</span></div>
+      <div class="chart-container">
+        <canvas id="pressChart"></canvas>
+      </div>
+    </div>
+    <!-- Angle Card -->
+    <div class="card" id="angle-card">
+      <div class="card-header">
+        <span class="card-title">Angle</span>
+        <i data-lucide="compass" class="icon"></i>
+      </div>
+      <div class="metric" id="angle">45.2<span class="unit">°</span></div>
+      <div class="chart-container">
+        <canvas id="angleChart"></canvas>
+      </div>
+    </div>
+
+
+
+<div class="card" id="balloon-status-card">
+  <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+    <span class="card-title">Balloon Status</span>
+    <div id="balloon-icon" class="status-safe">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke= "var(--primary-blue)" stroke-width="1.8" viewBox="0 0 24 24">
+        <path d="M12 2C8.13 2 5 7.03 5 11c0 2.25 1.5 5.5 2.5 7h9c1-1.5 2.5-4.75 2.5-7 0-3.97-3.13-9-7-9zm0 2c2.97 0 5 4.03 5 7 0 1.82-1.25 4.47-2 5.5h-6c-.75-1.03-2-3.68-2-5.5 0-2.97 2.03-7 5-7zm-1 15h2v1h-2zm0 2h2v1h-2z"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="metric" id="balloon-status">Safe & Stable</div>
+
+  <div id="balloon-pulse" class="status-safe"
+       style="width: 10px; height: 10px; border-radius: 50%; margin-top: 0.5rem;
+              animation: pulse 2s infinite; background: rgb(0, 0, 255);">
+  </div>
+</div>
+
+
+
+    <!-- Landing Predictor -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Landing In</span>
+        <i data-lucide="target" class="icon"></i>
+      </div>
+      <div class="metric" id="landing-time">15.0<span class="unit">min</span></div>
+    </div>
+
+    <!-- Stability Indicator -->
+    <div class="card" id="stability-card">
+      <div class="card-header">
+        <span class="card-title">Stability</span>
+        <i data-lucide="activity" class="icon"></i>
+      </div>
+      <div class="metric status-safe" id="stability-status">Stable</div>
+    </div>
+  </div>
+</body>
+</html>

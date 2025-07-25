@@ -1,0 +1,101 @@
+    :root {
+      --primary-red: #dc2626;
+      --primary-blue: #2563eb;
+      --primary-dark-blue: #1d4ed8;
+      --bg-dark: #0a0a0a;
+      --bg-card: rgba(37, 99, 235, 0.15);
+      --text: #ffffff;
+      --border: rgba(37, 99, 235, 0.3);
+      --shadow: rgba(37, 99, 235, 0.2);
+      --shadow-hover: rgba(37, 99, 235, 0.4);
+      --accent-red: rgba(220, 38, 38, 0.8);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      background: var(--bg-dark);
+      color: var(--text);
+      padding: 2rem;
+      min-height: 100vh;
+    }
+
+    .metrics-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 2px 8px var(--shadow);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(6px);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px var(--shadow-hover);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .icon {
+      color: var(--primary-blue);
+      width: 18px;
+      height: 18px;
+    }
+
+    .metric {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary-red);
+      text-shadow: 0 0 8px var(--accent-red);
+      margin-bottom: 0.75rem;
+    }
+
+    .unit {
+      font-size: 0.8rem;
+      color: var(--primary-dark-blue);
+      margin-left: 0.3rem;
+    }
+
+    .chart-container {
+      height: 100px;
+      margin-top: 0.75rem;
+    }
+
+    .status-safe { color: var(--primary-blue); }
+    .status-warning { color: #eab308; }
+    .status-danger { color: var(--primary-red); }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.1); }
+    }
+
+    
