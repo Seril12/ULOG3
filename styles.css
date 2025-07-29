@@ -43,6 +43,29 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       cursor: pointer;
     }
+      
+
+.track {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      padding: 0.4rem 1rem;
+      background: var(--primary-blue);
+      border: none;
+      color: white;
+      border-radius: 4px;
+    }
+
+    .live {
+      position: absolute;
+      top: 50px;
+      left: 200px;
+      padding: 0.4rem 1rem;
+      background : var(--primary-blue);
+      border: none;
+      color: white;
+      border-radius: 4px;
+    }
 
     .card:hover {
       transform: translateY(-2px);
@@ -54,6 +77,11 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 0.75rem;
+    }
+
+    .timer-title{
+      color: var(--primary-blue);
+
     }
 
     .card-title {

@@ -15,9 +15,13 @@
 </head>
 <body>
   <h1 style="text-align: center; color: var(--primary-blue); margin-bottom: 2rem;">ULOG3 Metric Cards</h1>
-  <a href="Tracking.html"><button>Tracking Satellite</button></a>
+<div class="button-container">
+  <a href="Tracking.html"><button class="track" style="font-family: 'JetBrains Mono', monospace;">Tracking Satellite</button></a>
+  <a href="Live_Overview1.html"><button class="live" style="font-family: 'JetBrains Mono', monospace;">Live Overview</button></a>
+  </div>
   <div class="metrics-container">
-    <!-- Temperature Card -->
+    
+
     <div class="card" id="temperature-card">
       <div class="card-header">
         <span class="card-title">Temperature</span>
@@ -29,7 +33,7 @@
       </div>
     </div>
 
-    <!-- Altitude Card -->
+    
     <div class="card" id="altitude-card">
       <div class="card-header">
         <span class="card-title">Altitude</span>
@@ -41,7 +45,7 @@
       </div>
     </div>
 
-    <!-- Pressure Card -->
+  
     <div class="card" id="pressure-card">
       <div class="card-header">
         <span class="card-title">Pressure</span>
@@ -52,7 +56,8 @@
         <canvas id="pressChart"></canvas>
       </div>
     </div>
-    <!-- Angle Card -->
+   
+
     <div class="card" id="angle-card">
       <div class="card-header">
         <span class="card-title">Angle</span>
@@ -102,6 +107,12 @@
         <i data-lucide="activity" class="icon"></i>
       </div>
       <div class="metric status-safe" id="stability-status">Stable</div>
+    </div>
+    
+    <div class="card" id="timer">
+      <span class="timer-title">Mission Timer</span>
+      <div class="metric" id="mission-timer">00:00:00</div>
+      
     </div>
   </div>
 </body>
