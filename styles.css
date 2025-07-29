@@ -11,6 +11,62 @@
       --accent-red: rgba(220, 38, 38, 0.8);
     }
 
+    #startBtn{
+      font-family: 'JetBrains Mono', monospace;
+      background-color: #1d4ed8;
+      color: white;
+      border: none; 
+      padding:10px;
+      height:40px;
+      width:70px;
+      border-radius: 5px;
+    }
+
+    #startBtn:hover{
+      box-shadow: 0 4px 12px var(--shadow-hover);
+      transition: background-color 0.3s ease;
+    }
+    #startBtn:active{
+      box-shadow: 0 2px 8px var(--shadow);
+      transition: background-color 0.1s ease;
+    }
+    #stopBtn:hover{
+      box-shadow: 0 4px 12px var(--primary-red);
+      transition: background-color 0.3s ease;
+    }
+    #stopBtn:active{
+      box-shadow: 0 2px 8px var(--shadow);
+      transition: background-color 0.1s ease;
+    }
+    #resetBtn:hover{
+      box-shadow: 0 4px 12px var(--shadow-hover);
+      transition: background-color 0.3s ease;
+    }
+    #resetBtn:active{
+      box-shadow: 0 2px 8px var(--shadow);
+      transition: background-color 0.1s ease;
+    }
+
+    #stopBtn{
+      font-family: 'JetBrains Mono', monospace;
+      background-color: #dc2626;
+      color: white;
+      border: none; 
+      padding:10px;
+      height:40px;
+      width:70px;
+      border-radius: 5px;
+    }
+    #resetBtn{
+      background-color: #2563eb;
+      font-family: 'JetBrains Mono', monospace;
+      color: white;
+      border: none; 
+      padding:10px;
+      height:40px;
+      width:70px;
+      border-radius: 5px;
+    } 
     * {
       margin: 0;
       padding: 0;
@@ -79,9 +135,16 @@
       margin-bottom: 0.75rem;
     }
 
-    .timer-title{
+    .card-title{
       color: var(--primary-blue);
+    }
 
+    #mission-timer{
+     font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary-red);
+      text-shadow: 0 0 8px var(--accent-red);
+      margin-bottom: 0.75rem;
     }
 
     .card-title {

@@ -82,10 +82,35 @@
       color: var(--text);
       opacity: 0.8;
     }
+    
+.track {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      padding: 0.4rem 1rem;
+      background: var(--primary-blue);
+      border: none;
+      color: white;
+      border-radius: 4px;
+    }
+
+    .live {
+      position: absolute;
+      top: 50px;
+      left: 200px;
+      padding: 0.4rem 1rem;
+      background : var(--primary-blue);
+      border: none;
+      color: white;
+      border-radius: 4px;
+    }
   </style>
 </head>
 <body>
+
   <h1 class="title">Live Tracking</h1>
+  <a href="Tracking.html"><button class="track" style="font-family: 'JetBrains Mono', monospace;">Tracking Satellite</button></a>
+  <a href="Live_Overview1.html"><button class="live" style="font-family: 'JetBrains Mono', monospace;">Live Overview</button></a>
   <div class="metrics-container">
     <div class="live-Map">
       <div class="card-title">Live Map</div>
