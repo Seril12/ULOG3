@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Tracking</title>
+  <style>
+    :root {
+      --primary-red: #dc2626;
+      --primary-blue: #2563eb;
+      --primary-dark-blue: #1d4ed8;
+      --bg-dark: #0a0a0a;
+      --bg-card: rgba(37, 99, 235, 0.15);
+      --text: #ffffff;
+      --border: rgba(37, 99, 235, 0.3);
+      --shadow: rgba(37, 99, 235, 0.2);
+      --shadow-hover: rgba(37, 99, 235, 0.4);
+      --accent-red: rgba(220, 38, 38, 0.8);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      background: var(--bg-dark);
+      color: var(--text);
+      padding: 2rem;
+      min-height: 100vh;
+    }
+
+    h1.title {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .metrics-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .live-Map, .Satellite-position {
+      background: var(--bg-card);
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 2px 8px var(--shadow);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(6px);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+      height: 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .live-Map:hover, .Satellite-position:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px var(--shadow-hover);
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--primary-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+    }
+
+    /* Optional placeholder content */
+    .placeholder {
+      font-size: 0.9rem;
+      color: var(--text);
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="title">Live Tracking</h1>
+  <div class="metrics-container">
+    <div class="live-Map">
+      <div class="card-title">Live Map</div>
+      <div class="placeholder">[Map will be displayed here]</div>
+    </div>
+    <div class="Satellite-position">
+      <div class="card-title">Satellite Position</div>
+      <div class="placeholder">[Satellite coordinates here]</div>
+    </div>
+  </div>
+</body>
+</html>

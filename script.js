@@ -99,7 +99,7 @@
         }
       });
     }
-
+    // Generate random values , as of now:)
     function updateMetrics() {
       const now = new Date().toLocaleTimeString();
       
